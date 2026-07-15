@@ -31,3 +31,19 @@ A modern, dark-themed Kanban board built entirely with **Vanilla HTML, CSS, and 
 2. Open `index.html` directly in your browser — no build step or server required.
 
 ## 📁 Project Structure
+kanban-board/
+├── index.html   # Page structure (columns, modal)
+├── style.css    # Dark theme, layout, animations
+└── script.js    # Task logic, drag-and-drop, localStorage
+
+## 📌 What This Project Demonstrates
+
+- DOM manipulation without a framework (`createElement`, `querySelector`, `classList`, `dataset`)
+- Event delegation for dynamically created elements
+- The full HTML5 Drag and Drop API lifecycle (`dragstart`, `dragover`, `dragleave`, `drop`, `dragend`)
+- Client-side data persistence with `localStorage`
+- Clean, modular vanilla JS structure with small, single-purpose functions
+
+## 📄 License
+
+This project is open source and available under the [MIT License](LICENSE).

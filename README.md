@@ -4,7 +4,7 @@ A modern, dark-themed Kanban board built entirely with **Vanilla HTML, CSS, and 
 
 🔗 **Live Demo:** https://vermamayank0412-lgtm.github.io/kanban-board/
 
-![Kanban Board Screenshot](screenshot.png)
+![Kanban Board Screenshot](kanban.png)
 
 ## ✨ Features
 
@@ -31,6 +31,7 @@ A modern, dark-themed Kanban board built entirely with **Vanilla HTML, CSS, and 
 2. Open `index.html` directly in your browser — no build step or server required.
 
 ## 📁 Project Structure
+
 kanban-board/
 ├── index.html   # Page structure (columns, modal)
 ├── style.css    # Dark theme, layout, animations

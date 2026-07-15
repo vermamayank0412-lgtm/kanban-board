@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kanban Board</title>
+
+  <!-- Linking our external stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ============ HEADER ============ -->
+  <header class="app-header">
+    <h1>📋 My Kanban Board</h1>
+    <!-- This button opens the modal popup -->
+    <button id="addTaskBtn" class="btn-primary">+ Add New Task</button>
+  </header>
+
+  <!-- ============ BOARD (3 COLUMNS) ============ -->
+  <main class="board">
+
+    <!-- TO DO COLUMN -->
+    <section class="column" data-status="todo">
+      <div class="column-header">
+        <h2>To Do</h2>
+        <!-- This span will show the live task count -->
+        <span class="task-count" id="count-todo">0</span>
+      </div>
+      <!-- All task cards for this column get added inside this div -->
+      <div class="task-list" id="list-todo"></div>
+    </section>
+
+    <!-- IN PROGRESS COLUMN -->
+    <section class="column" data-status="inprogress">
+      <div class="column-header">
+        <h2>In Progress</h2>
+        <span class="task-count" id="count-inprogress">0</span>
+      </div>
+      <div class="task-list" id="list-inprogress"></div>
+    </section>
+
+    <!-- DONE COLUMN -->
+    <section class="column" data-status="done">
+      <div class="column-header">
+        <h2>Done</h2>
+        <span class="task-count" id="count-done">0</span>
+      </div>
+      <div class="task-list" id="list-done"></div>
+    </section>
+
+  </main>
+
+  <!-- ============ ADD TASK MODAL ============ -->
+  <!-- This whole overlay is hidden by default using the "hidden" class -->
+  <div class="modal-overlay hidden" id="modalOverlay">
+    <div class="modal">
+      <h2 id="modalTitle">Add New Task</h2>
+
+      <label for="taskTitleInput">Task Title</label>
+      <input
+        type="text"
+        id="taskTitleInput"
+        placeholder="e.g. Design login page"
+        maxlength="60"
+      />
+
+      <label for="taskDescInput">Task Description</label>
+      <textarea
+        id="taskDescInput"
+        placeholder="e.g. Create a clean UI with dark theme"
+        maxlength="150"
+        rows="3"
+      ></textarea>
+
+      <!-- Small error message shown if the user submits an empty title -->
+      <p class="error-text hidden" id="errorText">Please enter a task title.</p>
+
+      <div class="modal-actions">
+        <button id="cancelBtn" class="btn-secondary">Cancel</button>
+        <button id="confirmAddBtn" class="btn-primary">Add Task</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Linking our JavaScript file at the END of body so the HTML loads first -->
+  <script src="script.js"></script>
+</body>
+</html>
